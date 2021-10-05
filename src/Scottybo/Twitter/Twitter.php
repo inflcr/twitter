@@ -15,6 +15,8 @@ use Scottybo\Twitter\Traits\GeoTrait;
 use Scottybo\Twitter\Traits\HelpTrait;
 use Scottybo\Twitter\Traits\ListTrait;
 use Scottybo\Twitter\Traits\MediaTrait;
+use Scottybo\Twitter\Traits\MediaMetadataTrait;
+use Scottybo\Twitter\Traits\MediaSubtitlesTrait;
 use Scottybo\Twitter\Traits\SearchTrait;
 use Scottybo\Twitter\Traits\StatusTrait;
 use Scottybo\Twitter\Traits\TrendTrait;
@@ -30,6 +32,8 @@ class Twitter extends tmhOAuth {
 		GeoTrait,
 		HelpTrait,
 		ListTrait,
+		MediaMetadataTrait,
+		MediaSubtitlesTrait,
 		MediaTrait,
 		SearchTrait,
 		StatusTrait,
