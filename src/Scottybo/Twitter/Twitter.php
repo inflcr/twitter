@@ -241,6 +241,11 @@ class Twitter extends tmhOAuth {
 			$this->config['host'] = $this->tconfig['UPLOAD_URL'];
 		}
 
+		if($name == 'media/metadata/create')
+		{
+			$parameters = json_encode($parameters);
+		}
+
 		$url = parent::url($this->tconfig['API_VERSION'].'/'.$name, $extension);
 
 		$this->log('METHOD : '.$requestMethod);
