@@ -241,7 +241,7 @@ class Twitter extends tmhOAuth {
 			$this->config['host'] = $this->tconfig['UPLOAD_URL'];
 		}
 
-		if($name == 'media/metadata/create')
+		if($name == 'media/metadata/create' || $name == 'media/subtitles/create' || $name == 'media/subtitles/delete')
 		{
 			$parameters = json_encode($parameters);
 		}
@@ -251,7 +251,6 @@ class Twitter extends tmhOAuth {
 		$this->log('METHOD : '.$requestMethod);
 		$this->log('QUERY : '.$name);
 		$this->log('URL : '.$url);
-		$this->log('PARAMETERS : '.http_build_query($parameters));
 		$this->log('MULTIPART : '.($multipart ? 'true' : 'false'));
 
 		parent::user_request([
