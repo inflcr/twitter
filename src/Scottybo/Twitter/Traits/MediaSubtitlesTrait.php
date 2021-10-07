@@ -14,8 +14,6 @@ Trait MediaSubtitlesTrait {
 	 */
 	public function postMediaSubtitles($parameters = [])
 	{
-		$this->tconfig['API_URL'] = 'upload.twitter.com';
-
 		return $this->post('media/subtitles/create', $parameters, true);
 	}
 
@@ -24,8 +22,6 @@ Trait MediaSubtitlesTrait {
 	 */
 	public function destroyMediaSubtitles($parameters = [])
 	{
-		$this->tconfig['API_URL'] = 'upload.twitter.com';
-		
 		return $this->post('media/subtitles/delete', $parameters);
 	}
 
