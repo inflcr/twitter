@@ -13,8 +13,6 @@ Trait MediaMetadataTrait {
 	 */
 	public function postMediaMetadata($parameters = [])
 	{
-		$this->tconfig['API_URL'] = 'upload.twitter.com';
-
 		return $this->post('media/metadata/create', $parameters, true);
 	}
 
